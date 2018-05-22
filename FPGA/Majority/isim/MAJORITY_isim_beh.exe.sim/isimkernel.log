@@ -1,0 +1,28 @@
+Command line:
+   MAJORITY_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50363
+
+Tue Apr 17 14:11:50 2018
+
+
+ Elaboration Time: 0.1404 sec
+
+ Current Memory Usage: 1475.26 Meg
+
+ Total Signals          : 36
+ Total Nets             : 21
+ Total Signal Drivers   : 10
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 11
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 101
+
+ Total Simulation Time: 0.156 sec
+
+ Current Memory Usage: 1475.26 Meg
+
+Tue Apr 17 14:11:54 2018
+

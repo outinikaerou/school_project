@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue May 01 15:37:14 2018
+# Process ID: 9428
+# Current directory: Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav/xsim.dir/TEST_COUNT4_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav/webtalk.log
+# Journal file: Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav/xsim.dir/TEST_COUNT4_behav/webtalk/xsim_webtalk.tcl -notrace

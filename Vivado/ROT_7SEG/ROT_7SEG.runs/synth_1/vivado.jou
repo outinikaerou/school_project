@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue May 01 14:36:06 2018
+# Process ID: 6416
+# Current directory: Z:/Vivado/ROT_7SEG/ROT_7SEG.runs/synth_1
+# Command line: vivado.exe -log ROT_7SEG.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROT_7SEG.tcl
+# Log file: Z:/Vivado/ROT_7SEG/ROT_7SEG.runs/synth_1/ROT_7SEG.vds
+# Journal file: Z:/Vivado/ROT_7SEG/ROT_7SEG.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ROT_7SEG.tcl -notrace

@@ -1,0 +1,140 @@
+ISim log file
+Running: Z:\FPGA\ROT_7SEG\T_ROT_7SEG_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/FPGA/ROT_7SEG/T_ROT_7SEG_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Rotary SW is  0
+
+    ----
+   |      |
+        
+   |      |
+    ----    
+
+Rotary SW is  1
+
+        
+           
+        
+           
+            
+
+Rotary SW is  2
+
+        
+           
+        
+           
+            
+
+Rotary SW is  3
+
+        
+           
+        
+           
+            
+
+Rotary SW is  4
+
+        
+           
+        
+           
+            
+
+Rotary SW is  5
+
+    ----
+   |       
+    ----
+          |
+    ----    
+
+Rotary SW is  6
+
+        
+           
+        
+           
+            
+
+Rotary SW is  7
+
+        
+           
+        
+           
+            
+
+Rotary SW is  8
+
+        
+           
+        
+           
+            
+
+Rotary SW is  9
+
+        
+           
+        
+           
+            
+
+# run all
+Rotary SW is 10
+
+    ----
+   |      |
+    ----
+   |      |
+            
+
+Rotary SW is 11
+
+        
+           
+        
+           
+            
+
+Rotary SW is 12
+
+        
+           
+        
+           
+            
+
+Rotary SW is 13
+
+        
+           
+        
+           
+            
+
+Rotary SW is 14
+
+        
+           
+        
+           
+            
+
+Rotary SW is 15
+
+    ----
+   |       
+    ----
+   |       
+            
+
+Stopped at time : 1600 ns :  in File "//FILESERV/home$/st30/st3001/FPGA/ROT_7SEG/T_ROT_7SEG.v" Line 23 

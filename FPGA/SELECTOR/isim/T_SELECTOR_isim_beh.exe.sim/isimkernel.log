@@ -1,0 +1,10 @@
+Command line:
+   T_SELECTOR_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53400
+
+Mon Apr 23 15:24:03 2018
+
+
+ Elaboration Time: 0.171601 sec

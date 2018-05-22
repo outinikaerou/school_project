@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2_isim_beh.exe" -prj "Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2_beh.prj" "work.T_UPDOWN_CNT2" "work.glbl" 

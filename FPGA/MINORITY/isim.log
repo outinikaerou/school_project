@@ -1,0 +1,11 @@
+ISim log file
+Running: Z:\FPGA\MINORITY\T_MINORITY_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/FPGA/MINORITY/T_MINORITY_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 800 ns : File "//FILESERV/home$/st30/st3001/FPGA/MINORITY/T_MINORITY.v" Line 17

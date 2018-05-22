@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/Vivado/COUNT4/COUNT4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module COUNT4
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/Vivado/COUNT4/T_COUNT4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TEST_COUNT4
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/Vivado/COUNT4/COUNT4.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

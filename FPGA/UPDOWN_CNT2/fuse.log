@@ -1,0 +1,23 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2_isim_beh.exe -prj Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2_beh.prj work.T_UPDOWN_CNT2 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/FPGA/UPDOWN_CNT2/UPDOWN_CNT2.vf" into library work
+Analyzing Verilog file "Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module FD
+Compiling module XOR2
+Compiling module NAND2
+Compiling module INV
+Compiling module VCC
+Compiling module UPDOWN_CNT2
+Compiling module T_UPDOWN_CNT2
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 8 Verilog Units
+Built simulation executable Z:/FPGA/UPDOWN_CNT2/T_UPDOWN_CNT2_isim_beh.exe
+Fuse Memory Usage: 29944 KB
+Fuse CPU Usage: 483 ms

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/udagawa/projects/FPGA/ROT_7SEG/T_ROT_7SEG.xst" -ofn "/home/udagawa/projects/FPGA/ROT_7SEG/T_ROT_7SEG.syr" 

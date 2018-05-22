@@ -1,0 +1,6 @@
+--cpu Cortex-M3
+".\objects\asm_test_3.o"
+--strict --scatter ".\Objects\asm_test_3.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\asm_test_3.map" -o .\Objects\asm_test_3.axf

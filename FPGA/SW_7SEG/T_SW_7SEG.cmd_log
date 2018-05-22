@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "Z:/FPGA/SW_7SEG/T_SW_7SEG.xst" -ofn "Z:/FPGA/SW_7SEG/T_SW_7SEG.syr" 
+xst -intstyle ise -ifn "Z:/FPGA/SW_7SEG/T_SW_7SEG.xst" -ofn "Z:/FPGA/SW_7SEG/T_SW_7SEG.syr" 
+xst -intstyle ise -ifn "Z:/FPGA/SW_7SEG/T_SW_7SEG.xst" -ofn "Z:/FPGA/SW_7SEG/T_SW_7SEG.syr" 
+xst -intstyle ise -ifn "Z:/FPGA/SW_7SEG/T_SW_7SEG.xst" -ofn "Z:/FPGA/SW_7SEG/T_SW_7SEG.syr" 

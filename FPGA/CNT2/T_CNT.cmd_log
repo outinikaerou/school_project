@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/FPGA/CNT2/T_CNT.xst" -ofn "Z:/FPGA/CNT2/T_CNT.syr" 

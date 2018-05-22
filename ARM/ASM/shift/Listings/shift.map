@@ -1,0 +1,106 @@
+Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
+
+==============================================================================
+
+Section Cross References
+
+    shift.o(RESET) refers to shift.o(STACK) for __initial_sp
+    shift.o(RESET) refers to shift.o(.text) for Reset_Handler
+    shift.o(RESET) refers to shift.o(Handlers) for NMI_Handler
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    shift.s                                  0x00000000   Number         0  shift.o ABSOLUTE
+    RESET                                    0x08000000   Section       64  shift.o(RESET)
+    .text                                    0x08000040   Section       84  shift.o(.text)
+    Handlers                                 0x08000094   Section       18  shift.o(Handlers)
+    STACK                                    0x20000000   Section     1024  shift.o(STACK)
+    __initial_sp                             0x20000400   Data           0  shift.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  shift.o(RESET)
+    Reset_Handler                            0x08000041   Thumb Code    70  shift.o(.text)
+    NMI_Handler                              0x08000095   Thumb Code     2  shift.o(Handlers)
+    HardFault_Handler                        0x08000097   Thumb Code     2  shift.o(Handlers)
+    MemManage_Handler                        0x08000099   Thumb Code     2  shift.o(Handlers)
+    BusFault_Handler                         0x0800009b   Thumb Code     2  shift.o(Handlers)
+    UsageFault_Handler                       0x0800009d   Thumb Code     2  shift.o(Handlers)
+    SVC_Handler                              0x0800009f   Thumb Code     2  shift.o(Handlers)
+    DebugMon_Handler                         0x080000a1   Thumb Code     2  shift.o(Handlers)
+    PendSV_Handler                           0x080000a3   Thumb Code     2  shift.o(Handlers)
+    SysTick_Handler                          0x080000a5   Thumb Code     2  shift.o(Handlers)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000000a8, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000000a8, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000040   Data   RO            2    RESET               shift.o
+    0x08000040   0x08000040   0x00000054   Code   RO            3    .text               shift.o
+    0x08000094   0x08000094   0x00000012   Code   RO            4    Handlers            shift.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080000a8, Size: 0x00000400, Max: 0x00002000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000400   Zero   RW            1    STACK               shift.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       102         14         64          0       1024        936   shift.o
+
+    ----------------------------------------------------------------------
+       104         14         64          0       1024        936   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       104         14         64          0       1024        884   Grand Totals
+       104         14         64          0       1024        884   ELF Image Totals
+       104         14         64          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  168 (   0.16kB)
+    Total RW  Size (RW Data + ZI Data)              1024 (   1.00kB)
+    Total ROM Size (Code + RO Data + RW Data)        168 (   0.16kB)
+
+==============================================================================
+

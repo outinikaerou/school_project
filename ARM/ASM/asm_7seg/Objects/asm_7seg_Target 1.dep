@@ -1,0 +1,2 @@
+Dependencies for Project 'asm_7seg', Target 'Target 1': (DO NOT MODIFY !)
+F (.\asm_7seg.s)(0x5AFD0536)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524" --pd "STM32F10X_MD_VL SETA 1"--list .\listings\asm_7seg.lst --xref -o .\objects\asm_7seg.o --depend .\objects\asm_7seg.d)

@@ -1,0 +1,6 @@
+--cpu Cortex-M3
+".\objects\tbl_1.o"
+--strict --scatter ".\Objects\tbl_1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\tbl_1.map" -o .\Objects\tbl_1.axf

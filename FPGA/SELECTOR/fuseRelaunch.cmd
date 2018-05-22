@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/FPGA/SELECTOR/T_SELECTOR_isim_beh.exe" -prj "Z:/FPGA/SELECTOR/T_SELECTOR_beh.prj" "work.T_SELECTOR" "work.glbl" 

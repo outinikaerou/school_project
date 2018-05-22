@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a15tcpg236-1" LaunchTime="1525152965">
+  <File Type="PWROPT-DRC" Name="ROT_7SEG_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ROT_7SEG_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ROT_7SEG_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="ROT_7SEG_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="ROT_7SEG.tcl"/>
+  <File Type="OPT-HWDEF" Name="ROT_7SEG.hwdef"/>
+  <File Type="RDI-RDI" Name="ROT_7SEG.vdi"/>
+  <File Type="OPT-DCP" Name="ROT_7SEG_opt.dcp"/>
+  <File Type="OPT-DRC" Name="ROT_7SEG_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="ROT_7SEG_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="ROT_7SEG_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="ROT_7SEG_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ROT_7SEG_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ROT_7SEG_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ROT_7SEG_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ROT_7SEG_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ROT_7SEG_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ROT_7SEG_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ROT_7SEG_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ROT_7SEG_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="ROT_7SEG_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ROT_7SEG_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ROT_7SEG_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ROT_7SEG_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ROT_7SEG_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="ROT_7SEG_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ROT_7SEG_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ROT_7SEG_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ROT_7SEG_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ROT_7SEG_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ROT_7SEG_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="ROT_7SEG.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="ROT_7SEG_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="ROT_7SEG.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ROT_7SEG_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="ROT_7SEG.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ROT_7SEG_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="ROT_7SEG.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ROT_7SEG_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="ROT_7SEG_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="ROT_7SEG_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="ROT_7SEG_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ROT_7SEG_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ROT_7SEG_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ROT_7SEG_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ROT_7SEG_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ROT_7SEG_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ROT_7SEG_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ROT_7SEG_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ROT_7SEG_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ROT_7SEG_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ROT_7SEG_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ROT_7SEG_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="ROT_7SEG.bit"/>
+  <File Type="BITSTR-RBT" Name="ROT_7SEG.rbt"/>
+  <File Type="BITSTR-NKY" Name="ROT_7SEG.nky"/>
+  <File Type="BITSTR-BMM" Name="ROT_7SEG_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="ROT_7SEG.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="ROT_7SEG.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/ROT_7SEG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ROT_7SEG"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/ROT_7SEG.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

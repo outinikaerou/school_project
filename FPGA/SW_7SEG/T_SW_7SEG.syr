@@ -1,0 +1,141 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: T_SW_7SEG.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "T_SW_7SEG.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "T_SW_7SEG"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-cpg196
+
+---- Source Options
+Top Module Name                    : T_SW_7SEG
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\SW_7SEG.vf" into library work
+Parsing module <SW_7SEG>.
+Analyzing Verilog file "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" into library work
+Parsing module <T_SW_7SEG>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:25 - "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" Line 13: Module <SW_7SEG> does not have a port named <Dp>.
+
+Elaborating module <T_SW_7SEG>.
+WARNING:HDLCompiler:817 - "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" Line 21: System task stop ignored for synthesis
+WARNING:HDLCompiler:872 - "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" Line 15: Using initial value of SW1 since it is never assigned
+
+Elaborating module <SW_7SEG>.
+
+Elaborating module <AND2>.
+
+Elaborating module <INV>.
+
+Elaborating module <BUF>.
+
+Elaborating module <GND>.
+ERROR:HDLCompiler:267 - "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" Line 13: Cannot find port Dp on this module
+Module T_SW_7SEG remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "\\fileserv\home$\st30\st3001\FPGA\SW_7SEG\T_SW_7SEG.v" Line 1: Empty module <T_SW_7SEG> remains a black box.
+--> 
+
+Total memory usage is 204636 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

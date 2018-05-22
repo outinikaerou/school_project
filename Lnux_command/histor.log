@@ -1,0 +1,160 @@
+    1  if config -a; ifconfig -a;  ifconfig -a; if config -a; ifconfig -a;  ifconfig -a; ifconfig -a
+    2  ifconfig -a
+    3  ls
+    4  sudo apt update
+    5  AGMT2468
+    6  SUDO APT UPDATE
+    7  sudo apt update
+    8  sudo apt install samba
+    9  sudo gedit /elc/samba/smb.conf
+   10  sudo getit /etc/samba/smb.conf
+   11  sudo gedit /etc/samba/smb.conf
+   12  sudo smbpasswd -a uda
+   13  sudo service smbd restart
+   14  sudo service nmbd restart
+   15  sudo gedit /etc/samba/smb.conf
+   16  sudo service smbd restart
+   17  sudo service nmbd restart
+   18  sudo gedit /etc/samba/smb.conf
+   19  sudo gedit /etc/samba/smb.conf 
+   20  history
+   21  history > history.log
+   22  ls
+   23  history
+   24  gedit hello.c
+   25  gcc hello.c -o hello
+   26  gedit hello.c
+   27  gcc hello.c -o hello
+   28  gedit hello.c
+   29  gcc hello.c -o hello
+   30  gedit hello.c
+   31  gcc hello.c -o hello
+   32  ./hello
+   33  gcc he
+   34  gedit hello.c
+   35  sudo apt install openssh-server
+   36  ./hello.c
+   37  ./hello
+   38  history > history.log
+   39  history
+   40  gedit hello.c
+   41  gedit hello.c &
+   42  ./hello
+   43  gedit hello.c &
+   44  ./hello
+   45  gcc hello -o hello
+   46  gedit hello.c
+   47  gcc hello -o hello
+   48  gedit hello.c
+   49  gcc hello -o hello
+   50  gcc hello.c -o hello
+   51  gedit hello.c
+   52  gedit hello.c &
+   53  pwd
+   54  cd
+   55  pwd
+   56  cd /root
+   57  ls
+   58  exit
+   59  bash
+   60  exit
+   61  ls
+   62  ls /
+   63  cd bin
+   64  pwd
+   65  ls bin
+   66  ls /bin
+   67  cd /proc
+   68  ls
+   69  cat cpcinfo
+   70  cat cpuinfo
+   71  cat meminfo
+   72  sudo -s
+   73  su -
+   74  sudo -s
+   75  bash
+   76  whic
+   77  whic ls
+   78  which ls
+   79  which cd
+   80  echo
+   81  which echo
+   82  which pwd
+   83  which ifconfig
+   84  history
+   85  cd /var
+   86  cd log
+   87  ls
+   88  cat dmesg
+   89  dmesg
+   90  dmesg |less
+   91  cd
+   92  ls
+   93  ls /usr
+   94  ls /usr/
+   95  ls -l
+   96  ls l
+   97  ps
+   98  ps -ef
+   99  ps aux
+  100  ls /etc
+  101  cd /etc
+  102  ls *.conf
+  103  ls ???*.conf
+  104  ls ??.conf
+  105  ls ???.conf
+  106  ls hosts.*
+  107  ls hosts.????
+  108  cd
+  109  ls -l /home/linuxtext
+  110  ls -l /home/linuxtext/
+  111  ls - /home/linuxtext/
+  112  ls -l
+  113  ls -l /home/uda
+  114  ls -la /home/uda
+  115  ls -la
+  116  ls-t
+  117  ls -t
+  118  ls -tl
+  119  echo ~
+  120  mkdir abc
+  121  echo ~/abc
+  122  mv abc bcd
+  123  echo ~
+  124  echo ~/bcd
+  125  ls -R
+  126  ls -lt
+  127  ls -ltr
+  128  cds /etc
+  129  cd /etc
+  130  ls -Sl
+  131  history
+  132  history > history.log
+  133  cd ..
+  134  cd ../..
+  135  cd ./bcd
+  136  vi xyz
+  137  history
+  138  less .bashrc
+  139  echo $path
+  140  echo $PATH
+  141  emv
+  142  env
+  143  ls --help
+  144  man ls
+  145  man 3 prinf
+  146  man 3 printf
+  147  history > history.log
+  148  sudo apt-get install manpages-ja manpages-ja-dev
+  149  man 3 ls
+  150  man 3 printf
+  151  mkdir linux_1
+  152  pwd
+  153  cal 2018
+  154  cal 04 2018
+  155  cal 04 2018 > 04.txt
+  156  cat > t.txt
+  157  cat t.txt
+  158  vi t.txt
+  159  history > history4/18.log
+  160  history > histor.log

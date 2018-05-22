@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MAJORITY.vf
+// /___/   /\     Timestamp : 04/17/2018 14:08:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog Z:/FPGA/Majority/MAJORITY.vf -w Z:/FPGA/Majority/MAJORITY.sch
+//Design Name: MAJORITY
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MAJORITY(A, 
+                B, 
+                C, 
+                Y);
+
+    input A;
+    input B;
+    input C;
+   output Y;
+   
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_39;
+   wire XLXN_40;
+   
+   AND2  XLXI_1 (.I0(C), 
+                .I1(B), 
+                .O(XLXN_39));
+   AND2  XLXI_2 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_36));
+   AND2  XLXI_3 (.I0(C), 
+                .I1(A), 
+                .O(XLXN_37));
+   OR2  XLXI_11 (.I0(XLXN_37), 
+                .I1(XLXN_36), 
+                .O(XLXN_40));
+   OR2  XLXI_12 (.I0(XLXN_39), 
+                .I1(XLXN_40), 
+                .O(Y));
+endmodule

@@ -1,0 +1,28 @@
+Command line:
+   T_ROT_7SEG_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52290
+
+Fri Apr 27 12:42:02 2018
+
+
+ Elaboration Time: 0.202802 sec
+
+ Current Memory Usage: 1475.26 Meg
+
+ Total Signals          : 85
+ Total Nets             : 36
+ Total Signal Drivers   : 28
+ Total Blocks           : 22
+ Total Primitive Blocks : 20
+ Total Processes        : 31
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 394
+
+ Total Simulation Time: 0.218402 sec
+
+ Current Memory Usage: 1475.26 Meg
+
+Fri Apr 27 12:42:28 2018
+

@@ -1,0 +1,56 @@
+			LDR		R4,=RCC_APB2ENR	  ;É|Å|ÉgÇÃèâä˙âª
+			MOV		R5,#0X0C
+			STR		R5,[R4]
+			LDR		R1,=0X33333333
+			LDR		R2,=GPIOA_CRL
+			STR		R1,[R2]			
+			LDR		R1,=0x44444444
+			LDR		R2,=GPIOA_CRH
+			STR		R1,[R2]			
+			LDR		R4,=AFIO_MAPR
+			LDR		R5,=0x02000000
+			STR		R5,[R4]
+			LDR		R4,=GPIOB_CRL
+			LDR		R5,=0x33333333
+			STR		R5,[R4]
+			LDR		R4,=GPIOB_ODR
+			LDR		R5,=0x0000
+			STR		R5,[R4]
+								
+			LDR		R0,=GPIOA_ODR
+			LDR		R1,=GPIOA_IDR		
+LOOP			
+			LDR		R2,[R1]
+			LSR		R2,#8
+			MVN		R2,R2
+			AND		R2,0x0003
+			
+			LSL		R2,#2
+			
+			LDR		R3,=data
+			
+			ADD		R3,R2
+			LDR		R2,[R3]
+			STR		R2,[R0]
+			
+			B			LOOP
+
+                	ENDP
+
+data			DCD		0xC0
+			DCD		0xF9
+			DCD		0xA4
+			DCD		0xB0
+			DCD		0x99
+			DCD		0x92
+			DCD		0x82
+			DCD		0xD8
+			DCD		0x80
+			DCD		0x90
+			DCD		0x08
+			DCD		0x03
+			DCD		0x46
+			DCD		0x21
+			DCD		0x06
+			DCD		0x0D
+dataend

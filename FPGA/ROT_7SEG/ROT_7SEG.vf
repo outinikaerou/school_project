@@ -1,0 +1,109 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ROT_7SEG.vf
+// /___/   /\     Timestamp : 04/27/2018 12:41:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog Z:/FPGA/ROT_7SEG/ROT_7SEG.vf -w Z:/FPGA/ROT_7SEG/ROT_7SEG.sch
+//Design Name: ROT_7SEG
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ROT_7SEG(R0, 
+                R1, 
+                R2, 
+                R3, 
+                A, 
+                B, 
+                C, 
+                D, 
+                Dp, 
+                E, 
+                F, 
+                G);
+
+    input R0;
+    input R1;
+    input R2;
+    input R3;
+   output A;
+   output B;
+   output C;
+   output D;
+   output Dp;
+   output E;
+   output F;
+   output G;
+   
+   wire XLXN_204;
+   wire XLXN_206;
+   wire XLXN_229;
+   wire XLXN_240;
+   wire XLXN_270;
+   wire XLXN_271;
+   wire XLXN_272;
+   wire XLXN_273;
+   wire XLXN_277;
+   wire XLXN_278;
+   wire XLXN_300;
+   
+   XOR2  XLXI_95 (.I0(R2), 
+                 .I1(R0), 
+                 .O(XLXN_206));
+   XOR2  XLXI_96 (.I0(R1), 
+                 .I1(R3), 
+                 .O(XLXN_204));
+   OR2  XLXI_97 (.I0(XLXN_272), 
+                .I1(XLXN_240), 
+                .O(E));
+   OR2  XLXI_98 (.I0(R1), 
+                .I1(XLXN_240), 
+                .O(D));
+   OR2  XLXI_99 (.I0(XLXN_229), 
+                .I1(XLXN_240), 
+                .O(C));
+   OR2  XLXI_100 (.I0(XLXN_240), 
+                 .I1(R0), 
+                 .O(B));
+   OR2  XLXI_101 (.I0(XLXN_240), 
+                 .I1(XLXN_270), 
+                 .O(G));
+   OR2  XLXI_107 (.I0(XLXN_204), 
+                 .I1(XLXN_206), 
+                 .O(XLXN_240));
+   BUF  XLXI_108 (.I(XLXN_240), 
+                 .O(F));
+   BUF  XLXI_109 (.I(XLXN_240), 
+                 .O(A));
+   VCC  XLXI_110 (.P(Dp));
+   OR2  XLXI_112 (.I0(XLXN_277), 
+                 .I1(XLXN_300), 
+                 .O(XLXN_278));
+   OR2  XLXI_113 (.I0(XLXN_300), 
+                 .I1(R1), 
+                 .O(XLXN_273));
+   OR2  XLXI_114 (.I0(R1), 
+                 .I1(R0), 
+                 .O(XLXN_271));
+   INV  XLXI_115 (.I(XLXN_271), 
+                 .O(XLXN_270));
+   INV  XLXI_116 (.I(XLXN_273), 
+                 .O(XLXN_272));
+   INV  XLXI_117 (.I(R0), 
+                 .O(XLXN_300));
+   INV  XLXI_121 (.I(XLXN_278), 
+                 .O(XLXN_229));
+   INV  XLXI_122 (.I(R1), 
+                 .O(XLXN_277));
+endmodule

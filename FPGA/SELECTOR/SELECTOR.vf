@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : SELECTOR.vf
+// /___/   /\     Timestamp : 04/23/2018 15:23:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog Z:/FPGA/SELECTOR/SELECTOR.vf -w Z:/FPGA/SELECTOR/SELECTOR.sch
+//Design Name: SELECTOR
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module SELECTOR(A, 
+                B, 
+                C, 
+                Y);
+
+    input A;
+    input B;
+    input C;
+   output Y;
+   
+   wire XLXN_80;
+   wire XLXN_81;
+   wire XLXN_82;
+   
+   NOR2  XLXI_52 (.I0(C), 
+                 .I1(A), 
+                 .O(XLXN_82));
+   NOR2  XLXI_53 (.I0(C), 
+                 .I1(C), 
+                 .O(XLXN_80));
+   NOR2  XLXI_54 (.I0(B), 
+                 .I1(XLXN_80), 
+                 .O(XLXN_81));
+   NOR2  XLXI_55 (.I0(XLXN_81), 
+                 .I1(XLXN_82), 
+                 .O(Y));
+endmodule

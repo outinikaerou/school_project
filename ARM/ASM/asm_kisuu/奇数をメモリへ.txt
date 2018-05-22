@@ -1,0 +1,33 @@
+; *********************************************************************
+; kadai program is here				
+; *********************************************************************
+
+
+			MOV		R0,#10
+			LDR		R1,=ans
+			
+LOOP
+			ANDS	R2,R0,#1	
+			STRNE	R0,[R1]
+			ADDNE	R1,#4
+
+
+			SUBS	R0,#1
+			BGE		LOOP
+			
+			B			.
+
+
+		ALIGN	4		; <-- ここで４バイト区切りに調整
+
+                ENDP
+
+		AREA	MyData, DATA, READWRITE ;<--MyDataセクションは、DATAでRAM上に
+				
+ans		space		4
+			space		4
+			space		4
+			space		4		
+			space		4
+endans
+

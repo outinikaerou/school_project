@@ -1,0 +1,2 @@
+Dependencies for Project 'asm_guusuu', Target 'Target 1': (DO NOT MODIFY !)
+F (.\asm_guusuu.s)(0x5AFCEF9A)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524" --pd "STM32F10X_MD_VL SETA 1"--list .\listings\asm_guusuu.lst --xref -o .\objects\asm_guusuu.o --depend .\objects\asm_guusuu.d)
