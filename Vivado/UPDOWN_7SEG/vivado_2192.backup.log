@@ -1,0 +1,325 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 28 11:55:08 2018
+# Process ID: 2192
+# Current directory: Z:/github/Vivado/UPDOWN_7SEG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9040 Z:\github\Vivado\UPDOWN_7SEG\UPDOWN_7SEG.xpr
+# Log file: Z:/github/Vivado/UPDOWN_7SEG/vivado.log
+# Journal file: Z:/github/Vivado/UPDOWN_7SEG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/Vivado/UPDOWN_7SEG' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'UPDOWN_7SEG.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 845.633 ; gain = 128.250
+add_files -norecurse Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.v
+add_files -norecurse {Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v Z:/github/Vivado/DECODER7/DECODER7.v}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse Z:/github/Vivado/UPDOWN_7SEG/T_UPDOWN10_2.v
+set_property -name {xsim.simulate.runtime} -value {0ns} -objects [get_filesets sim_1]
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TEST_UPDOWN10' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav'
+"xvlog -m64 --relax -prj TEST_UPDOWN10_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UPDOWN
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/DECODER7/DECODER7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODER7
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UPDOWN_7SEG
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/T_UPDOWN10_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TEST_UPDOWN10
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 2001e4ccd0484675b1259f8579e48ab8 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TEST_UPDOWN10_behav xil_defaultlib.TEST_UPDOWN10 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.UPDOWN(SEC1_MAX=4)
+Compiling module xil_defaultlib.DECODER7
+Compiling module xil_defaultlib.UPDOWN_7SEG(SEC1_MAX=4)
+Compiling module xil_defaultlib.TEST_UPDOWN10
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TEST_UPDOWN10_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/xsim.dir/TEST_UPDOWN10_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/xsim.dir/TEST_UPDOWN10_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon May 28 12:06:52 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon May 28 12:06:52 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 877.449 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TEST_UPDOWN10_behav -key {Behavioral:sim_1:Functional:TEST_UPDOWN10} -tclbatch {TEST_UPDOWN10.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source TEST_UPDOWN10.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0ns
+                   0 clk=0 reset=0 count=0000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TEST_UPDOWN10_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 888.941 ; gain = 11.492
+run 10 us
+                  50 clk=1 reset=0 count=0000
+                 100 clk=0 reset=1 count=0000
+                 150 clk=1 reset=1 count=0000
+                 200 clk=0 reset=1 count=0000
+                 250 clk=1 reset=1 count=0000
+                 300 clk=0 reset=1 count=0000
+                 350 clk=1 reset=1 count=0000
+                 400 clk=0 reset=1 count=0000
+                 450 clk=1 reset=1 count=0001
+                 500 clk=0 reset=1 count=0001
+                 550 clk=1 reset=1 count=0001
+                 600 clk=0 reset=1 count=0001
+                 650 clk=1 reset=1 count=0001
+                 700 clk=0 reset=1 count=0001
+                 750 clk=1 reset=1 count=0001
+                 800 clk=0 reset=1 count=0001
+                 850 clk=1 reset=1 count=0010
+                 900 clk=0 reset=1 count=0010
+                 950 clk=1 reset=1 count=0010
+                1000 clk=0 reset=1 count=0010
+                1050 clk=1 reset=1 count=0010
+                1100 clk=0 reset=1 count=0010
+                1150 clk=1 reset=1 count=0010
+                1200 clk=0 reset=1 count=0010
+                1250 clk=1 reset=1 count=0011
+                1300 clk=0 reset=1 count=0011
+                1350 clk=1 reset=1 count=0011
+                1400 clk=0 reset=1 count=0011
+                1450 clk=1 reset=1 count=0011
+                1500 clk=0 reset=1 count=0011
+                1550 clk=1 reset=1 count=0011
+                1600 clk=0 reset=1 count=0011
+                1650 clk=1 reset=1 count=0100
+                1700 clk=0 reset=1 count=0100
+                1750 clk=1 reset=1 count=0100
+                1800 clk=0 reset=1 count=0100
+                1850 clk=1 reset=1 count=0100
+                1900 clk=0 reset=1 count=0100
+                1950 clk=1 reset=1 count=0100
+                2000 clk=0 reset=1 count=0100
+                2050 clk=1 reset=1 count=0101
+                2100 clk=0 reset=1 count=0101
+                2150 clk=1 reset=1 count=0101
+                2200 clk=0 reset=1 count=0101
+                2250 clk=1 reset=1 count=0101
+                2300 clk=0 reset=1 count=0101
+                2350 clk=1 reset=1 count=0101
+                2400 clk=0 reset=1 count=0101
+                2450 clk=1 reset=1 count=0110
+                2500 clk=0 reset=1 count=0110
+                2550 clk=1 reset=1 count=0110
+                2600 clk=0 reset=1 count=0110
+                2650 clk=1 reset=1 count=0110
+                2700 clk=0 reset=1 count=0110
+                2750 clk=1 reset=1 count=0110
+                2800 clk=0 reset=1 count=0110
+                2850 clk=1 reset=1 count=0111
+                2900 clk=0 reset=1 count=0111
+                2950 clk=1 reset=1 count=0111
+                3000 clk=0 reset=1 count=0111
+                3050 clk=1 reset=1 count=0111
+                3100 clk=0 reset=1 count=0111
+                3150 clk=1 reset=1 count=0111
+                3200 clk=0 reset=1 count=0111
+                3250 clk=1 reset=1 count=1000
+                3300 clk=0 reset=1 count=1000
+                3350 clk=1 reset=1 count=1000
+                3400 clk=0 reset=1 count=1000
+                3450 clk=1 reset=1 count=1000
+                3500 clk=0 reset=1 count=1000
+                3550 clk=1 reset=1 count=1000
+                3600 clk=0 reset=1 count=1000
+                3650 clk=1 reset=1 count=1001
+                3700 clk=0 reset=1 count=1001
+                3750 clk=1 reset=1 count=1001
+                3800 clk=0 reset=1 count=1001
+                3850 clk=1 reset=1 count=1001
+                3900 clk=0 reset=1 count=1001
+                3950 clk=1 reset=1 count=1001
+                4000 clk=0 reset=1 count=1001
+                4050 clk=1 reset=1 count=0000
+                4100 clk=0 reset=1 count=0000
+                4150 clk=1 reset=1 count=0000
+                4200 clk=0 reset=1 count=0000
+                4250 clk=1 reset=1 count=0000
+                4300 clk=0 reset=1 count=0000
+                4350 clk=1 reset=1 count=0000
+                4400 clk=0 reset=1 count=0000
+                4450 clk=1 reset=1 count=0001
+                4500 clk=0 reset=1 count=0001
+                4550 clk=1 reset=1 count=0001
+                4600 clk=0 reset=1 count=0001
+                4650 clk=1 reset=1 count=0001
+                4700 clk=0 reset=1 count=0001
+                4750 clk=1 reset=1 count=0001
+                4800 clk=0 reset=1 count=0001
+                4850 clk=1 reset=1 count=0010
+                4900 clk=0 reset=1 count=0010
+                4950 clk=1 reset=1 count=0010
+                5000 clk=0 reset=1 count=0010
+                5050 clk=1 reset=1 count=0010
+                5100 clk=0 reset=1 count=0010
+                5150 clk=1 reset=1 count=0010
+                5200 clk=0 reset=1 count=0010
+                5250 clk=1 reset=1 count=0011
+                5300 clk=0 reset=1 count=0011
+                5350 clk=1 reset=1 count=0011
+                5400 clk=0 reset=1 count=0011
+                5450 clk=1 reset=1 count=0011
+                5500 clk=0 reset=1 count=0011
+                5550 clk=1 reset=1 count=0011
+                5600 clk=0 reset=1 count=0011
+                5650 clk=1 reset=1 count=0100
+                5700 clk=0 reset=1 count=0100
+                5750 clk=1 reset=1 count=0100
+                5800 clk=0 reset=1 count=0100
+                5850 clk=1 reset=1 count=0100
+                5900 clk=0 reset=1 count=0100
+                5950 clk=1 reset=1 count=0100
+                6000 clk=0 reset=1 count=0100
+                6050 clk=1 reset=1 count=0101
+                6100 clk=0 reset=1 count=0101
+                6150 clk=1 reset=1 count=0101
+                6200 clk=0 reset=1 count=0101
+                6250 clk=1 reset=1 count=0101
+                6300 clk=0 reset=1 count=0101
+                6350 clk=1 reset=1 count=0101
+                6400 clk=0 reset=1 count=0101
+                6450 clk=1 reset=1 count=0100
+                6500 clk=0 reset=1 count=0100
+                6550 clk=1 reset=1 count=0100
+                6600 clk=0 reset=1 count=0100
+                6650 clk=1 reset=1 count=0100
+                6700 clk=0 reset=1 count=0100
+                6750 clk=1 reset=1 count=0100
+                6800 clk=0 reset=1 count=0100
+                6850 clk=1 reset=1 count=0011
+                6900 clk=0 reset=1 count=0011
+                6950 clk=1 reset=1 count=0011
+                7000 clk=0 reset=1 count=0011
+                7050 clk=1 reset=1 count=0011
+                7100 clk=0 reset=1 count=0011
+                7150 clk=1 reset=1 count=0011
+                7200 clk=0 reset=1 count=0011
+                7250 clk=1 reset=1 count=0010
+                7300 clk=0 reset=1 count=0010
+                7350 clk=1 reset=1 count=0010
+                7400 clk=0 reset=1 count=0010
+                7450 clk=1 reset=1 count=0010
+                7500 clk=0 reset=1 count=0010
+                7550 clk=1 reset=1 count=0010
+                7600 clk=0 reset=1 count=0010
+                7650 clk=1 reset=1 count=0001
+                7700 clk=0 reset=1 count=0001
+                7750 clk=1 reset=1 count=0001
+                7800 clk=0 reset=1 count=0001
+                7850 clk=1 reset=1 count=0001
+                7900 clk=0 reset=1 count=0001
+                7950 clk=1 reset=1 count=0001
+                8000 clk=0 reset=1 count=0001
+                8050 clk=1 reset=1 count=0000
+                8100 clk=0 reset=1 count=0000
+                8150 clk=1 reset=1 count=0000
+                8200 clk=0 reset=1 count=0000
+                8250 clk=1 reset=1 count=0000
+                8300 clk=0 reset=1 count=0000
+                8350 clk=1 reset=1 count=0000
+                8400 clk=0 reset=1 count=0000
+                8450 clk=1 reset=1 count=1001
+                8500 clk=0 reset=1 count=1001
+                8550 clk=1 reset=1 count=1001
+                8600 clk=0 reset=1 count=1001
+                8650 clk=1 reset=1 count=1001
+                8700 clk=0 reset=1 count=1001
+                8750 clk=1 reset=1 count=1001
+                8800 clk=0 reset=1 count=1001
+                8850 clk=1 reset=1 count=1000
+                8900 clk=0 reset=1 count=1000
+                8950 clk=1 reset=1 count=1000
+                9000 clk=0 reset=1 count=1000
+                9050 clk=1 reset=1 count=1000
+                9100 clk=0 reset=1 count=1000
+                9150 clk=1 reset=1 count=1000
+                9200 clk=0 reset=1 count=1000
+                9250 clk=1 reset=1 count=0111
+                9300 clk=0 reset=1 count=0111
+                9350 clk=1 reset=1 count=0111
+                9400 clk=0 reset=1 count=0111
+                9450 clk=1 reset=1 count=0111
+                9500 clk=0 reset=1 count=0111
+                9550 clk=1 reset=1 count=0111
+                9600 clk=0 reset=1 count=0111
+                9650 clk=1 reset=1 count=0110
+                9700 clk=0 reset=1 count=0110
+                9750 clk=1 reset=1 count=0110
+                9800 clk=0 reset=1 count=0110
+                9850 clk=1 reset=1 count=0110
+                9900 clk=0 reset=1 count=0110
+                9950 clk=1 reset=1 count=0110
+               10000 clk=0 reset=1 count=0110
+run all
+               10050 clk=1 reset=1 count=0101
+$finish called at time : 10100 ns : File "Z:/github/Vivado/UPDOWN_7SEG/T_UPDOWN10_2.v" Line 19
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon May 28 12:16:06 2018] Launched synth_1...
+Run output will be captured here: Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.runs/synth_1/runme.log
+[Mon May 28 12:16:06 2018] Launched impl_1...
+Run output will be captured here: Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+create_project CNT60_ALL Z:/github/Vivado/CNT60_ALL -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+close_project
+open_project Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/Vivado/UPDOWN10_2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'UPDOWN10_2.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+add_files -norecurse Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 28 13:42:56 2018...

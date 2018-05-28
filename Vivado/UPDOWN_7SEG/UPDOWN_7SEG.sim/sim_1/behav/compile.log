@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UPDOWN
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/DECODER7/DECODER7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODER7
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UPDOWN_7SEG
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/T_UPDOWN10_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TEST_UPDOWN10
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/CNT60_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CNT60
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/dcount.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DCOUNT
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/DECODER7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODER7
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/CNT60_ALL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CNT60_ALL
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/TEST_CNT60_ALL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TEST_CNT60_ALL
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/github/Vivado/CNT60_ALL/CNT60_ALL.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

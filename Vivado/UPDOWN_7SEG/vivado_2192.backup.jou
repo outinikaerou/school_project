@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 28 11:55:08 2018
+# Process ID: 2192
+# Current directory: Z:/github/Vivado/UPDOWN_7SEG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9040 Z:\github\Vivado\UPDOWN_7SEG\UPDOWN_7SEG.xpr
+# Log file: Z:/github/Vivado/UPDOWN_7SEG/vivado.log
+# Journal file: Z:/github/Vivado/UPDOWN_7SEG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.xpr
+add_files -norecurse Z:/github/Vivado/UPDOWN_7SEG/UPDOWN_7SEG.v
+add_files -norecurse {Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v Z:/github/Vivado/DECODER7/DECODER7.v}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse Z:/github/Vivado/UPDOWN_7SEG/T_UPDOWN10_2.v
+set_property -name {xsim.simulate.runtime} -value {0ns} -objects [get_filesets sim_1]
+launch_simulation
+source TEST_UPDOWN10.tcl
+run 10 us
+run all
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_sim
+close_project
+create_project CNT60_ALL Z:/github/Vivado/CNT60_ALL -part xc7a35tcpg236-1
+close_project
+open_project Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.xpr
+add_files -norecurse Z:/github/Vivado/UPDOWN10_2/UPDOWN10_2.v

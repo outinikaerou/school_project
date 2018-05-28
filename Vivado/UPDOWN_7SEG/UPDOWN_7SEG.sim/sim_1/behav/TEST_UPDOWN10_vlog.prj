@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../UPDOWN10_2/UPDOWN10_2.v"
+verilog xil_defaultlib  "../../../../DECODER7/DECODER7.v"
+verilog xil_defaultlib  "../../../UPDOWN_7SEG.v"
+verilog xil_defaultlib  "../../../T_UPDOWN10_2.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
