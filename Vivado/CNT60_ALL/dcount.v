@@ -45,7 +45,7 @@ begin
                 sa_count <= 4'b0111;L_tmp <= L1;
                         end
             default:begin
-                sa_count <= 4'bxxxx;L_tmp <= 8'bxxxxxxxx;
+                sa_count <= 4'b1111;L_tmp <= 8'b11111111;
                         end
         endcase
 end

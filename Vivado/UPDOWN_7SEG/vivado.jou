@@ -54,3 +54,26 @@ run all
 close_sim
 launch_simulation
 source TEST_CNT60_ALL.tcl
+run all
+run all
+run 10 us
+close_sim
+launch_simulation
+source TEST_CNT60_ALL.tcl
+run all
+close_sim
+launch_simulation
+source TEST_CNT60_ALL.tcl
+run all
+add_wave {{/TEST_CNT60_ALL/i1/CNT10}} {{/TEST_CNT60_ALL/i1/CNT6}} 
+restart
+run all
+add_wave {{/TEST_CNT60_ALL/i1/tmp_count}} {{/TEST_CNT60_ALL/i1/ENABLE}} 
+restart
+run all
+add_wave {{/TEST_CNT60_ALL/i1/i0}} 
+add_wave {{/TEST_CNT60_ALL/i1/i0}} 
+add_wave {{/TEST_CNT60_ALL/i1/ENABLE_kHz}} 
+restart
+run all
+close_sim
