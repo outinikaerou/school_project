@@ -1,0 +1,30 @@
+TEST_CNT60_ALL.vの説明
+
+テストベンチの説明
+
+module TEST_CNT60_ALL;　　//module名はTEST_CNT60_ALL
+reg clk, reset, dec;　　//テストベンチの入力はreg宣言される。
+wire [7:0] led;　　　　//テストベンチの出力はwire宣言される。
+wire [3:0] sa;
+
+parameter CYCLE = 100;　　CYCLEを100と定義する。
+parameter SIM_SEC1_MAX = 4;　SIM_SEC1_MAX = 4と定義する。しかし、このままではENABLE_KHzが動かないので、ここを変更する。
+
+CNT60_ALL #(.SEC1_MAX(SIM_SEC1_MAX)) 　　//CNT60_ALLで定義したSEC1_MAXをSIM_SEC1_MAXと置き換える。
+		i1(.RESET(reset), .CLK(clk), .DEC(dec), .LED(led), .SA(sa));
+
+always #(CYCLE/2)　　//CYCLEが半分になったら
+    clk = ~clk;　　　//clkを反転させる。
+
+initial　　//initial文。開始直後に一度実行される。
+begin
+    reset = 1'b0; clk = 1'b0; dec = 1'b1;  //resetを0にする。clkを0にする。decを1にする。
+    #CYCLE reset = 1'b1;　　1CYCLEしたらresetに1をいれる。
+    #(65*CYCLE*SIM_SEC1_MAX) dec = 1'b0;　　140CYCLEしたら、decを0にする。
+    #(10*CYCLE*SIM_SEC1_MAX) $finish;　　＋40CYCLEした時に終わる。
+end
+
+initial
+    $monitor($time,,"clk=%b reset=%b dec=%b count60=%d%d", clk, reset, dec, i1.i0.CNT6 , i1.i0.CNT10);　
+　　　　//monitorに出力する。%bは2進数、%dは10進数で表示する。
+endmodule

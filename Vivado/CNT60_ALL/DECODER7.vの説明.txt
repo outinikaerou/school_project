@@ -1,0 +1,21 @@
+module DECODER7(COUNT,LED); //module名 DECODER7
+input [3:0] COUNT;　　//inputは4bitのCOUNT
+output [7:0] LED;　　//outputは8bitのLED
+reg [7:0] LED;
+
+always @(COUNT)　　//COUNTが変化した時に常に動作する。
+  begin
+     case(COUNT)       //ABCDEFG Dp
+       4'b0000:LED <= 8'b0000001_1;　　//COUNTが0000の時「0」
+       4'b0001:LED <= 8'b1001111_1;　　//COUNTが0001の時「1」
+       4'b0010:LED <= 8'b0010010_1;　　//COUNTが0010の時「2」
+       4'b0011:LED <= 8'b0000110_1;　　//以下9まで行う。
+       4'b0100:LED <= 8'b1001100_1;　　//
+       4'b0101:LED <= 8'b0100100_1;　　//
+       4'b0110:LED <= 8'b0100000_1;　　//
+       4'b0111:LED <= 8'b0001101_1;　　//
+       4'b1000:LED <= 8'b0000000_1;　　//
+       4'b1001:LED <= 8'b0000100_1;　　//
+       default:LED <= 8'b0110000_1;　　//default状態の時は「1」
+     endcase
+  end

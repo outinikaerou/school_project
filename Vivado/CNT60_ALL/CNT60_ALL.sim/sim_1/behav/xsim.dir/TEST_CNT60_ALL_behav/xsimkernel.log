@@ -1,7 +1,7 @@
-Running: xsim.dir/TEST_CNT60_ALL_behav/xsimk.exe -simmode gui -wdb TEST_CNT60_ALL_behav.wdb -simrunnum 0 -socket 54051
+Running: xsim.dir/TEST_CNT60_ALL_behav/xsimk.exe -simmode gui -wdb TEST_CNT60_ALL_behav.wdb -simrunnum 0 -socket 54985
 Design successfully loaded
-Design Loading Memory Usage: 7848 KB (Peak: 7848 KB)
-Design Loading CPU Usage: 31 ms
+Design Loading Memory Usage: 21352 KB (Peak: 21352 KB)
+Design Loading CPU Usage: 171 ms
 Simulation completed
-Simulation Memory Usage: 8952 KB (Peak: 8952 KB)
-Simulation CPU Usage: 186 ms
+Simulation Memory Usage: 21860 KB (Peak: 21860 KB)
+Simulation CPU Usage: 171 ms

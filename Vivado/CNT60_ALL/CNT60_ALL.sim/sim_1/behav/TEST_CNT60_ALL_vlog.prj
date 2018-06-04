@@ -1,8 +1,8 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../CNT60_2.v"
 verilog xil_defaultlib  "../../../dcount.v"
+verilog xil_defaultlib  "../../../CNT60.v"
 verilog xil_defaultlib  "../../../DECODER7.v"
-verilog xil_defaultlib  "../../../CNT60_ALL.v"
+verilog xil_defaultlib  "../../../CNT_ALL.v"
 verilog xil_defaultlib  "../../../TEST_CNT60_ALL.v"
 
 # compile glbl module

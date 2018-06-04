@@ -1,0 +1,59 @@
+DCOUNT（ダイナミックカウント）の説明
+
+ダイナミック点灯LEDとは高速で点滅させているが、人間の目には常に点灯させているように見えるLEDのことである。
+ここでは、1桁目を点灯させて、次に2桁目を点灯させているが、人の目には同時に点灯しているように見える。
+
+module DCOUNT (CLK, ENABLE, L1, L2, L3, L4, SA, L);　//module名がDCOUNTで、（）ないは信号。
+input CLK, ENABLE;　　//CLKはクロック、ENABLEはKHzオーダーで1回カウントする信号。
+input [7:0] L1, L2, L3, L4;　　L1からL4は、8bitの入力信号。デコーダーから入力される。
+output [3:0] SA;　　  //SAは4bitの出力で、桁を決める信号。
+output [7:0] L;　　　//Lは8bitの出力で、７セグメントの中身を決める信号
+
+parameter MAX_COUNT = 3'b111;　　//parameter宣言は定数を定義する。この場合、0から7までのMAX_COUNTを定義している。
+reg [2:0] sa_count_tmp;  //上のMAX_COUNTで使う。4桁表示するものとその間に消灯するもので8個必要であるため。
+reg [3:0] sa_count;
+reg [7:0] L_tmp;
+
+assign SA[3] = (sa_count[3]==1'b0)? 1'b1 : 1'b0;　　//0から3まであり、全て合わせてsa_countの4桁を表す。
+assign SA[2] = (sa_count[2]==1'b0)? 1'b1 : 1'b0;　　//元のソースでは、? 1'b0: 1'bz となっているが
+assign SA[1] = (sa_count[1]==1'b0)? 1'b1 : 1'b0;　　//今用いているFPGAでは正論理、負論理が逆転するので
+assign SA[0] = (sa_count[0]==1'b0)? 1'b1 : 1'b0;　　//　? 1'b1: 1'b0 1と記述する。
+assign L = L_tmp;
+
+always @(posedge CLK)　　//CLKが立った常に動作する。
+  begin
+     if (ENABLE==1'b1)　　//ENABLEが1の時。
+       if (sa_count_tmp==MAX_COUNT)　　//sa_count_tmpが3'b111ならば。
+	 sa_count_tmp <= 3'b000;　　//sa_count_tmpに3'b000をいれる。
+       else
+	 sa_count_tmp <= sa_count_tmp + 1'b1;　　//sa_count_tmpが3'b111以外ならば、sa_count_tmpに1を足す。
+  end
+   
+always @(posedge CLK)　　//CLKが立った常に動作する。
+  begin
+     if (sa_count_tmp[0]==1'b0)  　//sa_count_tmpの1桁目が0ならば（偶数ならば）
+       begin
+	       sa_count <= 4'b1111;L_tmp <= L_tmp; 　//sa_countに4'b1111を入れる（全て消灯する）
+       end
+     else　　　　　　　　　　　　　//sa_count_tmpの1桁目が1ならば（奇数ならば）
+       case (sa_count_tmp[2:1])　　//sa_count_tmpの1桁目と2桁目を用いる。
+	       2'b00:begin
+	           sa_count <= 4'b1110;L_tmp <= L1;　　//sa_count_tmpが001の時、LEDの1桁目にi1デコーダーからの入力を入れる。
+                   end
+	       2'b01:begin
+	           sa_count <= 4'b1101;L_tmp <= L2;　　//sa_count_tmpが011の時、LEDの2桁目にi2デコーダーからの入力を入れる。
+	               end
+	       2'b10:begin
+	           sa_count <= 4'b1011;L_tmp <= L3;　　//sa_count_tmpが101の時、LEDの3桁目にデコーダーからの入力を入れる（設定されていない）
+	               end
+	       2'b11:begin
+	           sa_count <= 4'b0111;L_tmp <= L4;　　//sa_count_tmpが111の時、LEDの4桁目にデコーダーからの入力を入れる（設定されていない）
+	               end
+	       default:begin
+	           sa_count <= 4'bxxxx;L_tmp <= 8'bxxxxxxxx;  //デフォルトの時は不定なので、出力しない。
+	               end
+       endcase
+  end
+
+endmodule
+

@@ -1,0 +1,106 @@
+60進カウンターの説明
+
+各moduleの一行ごとに説明していく。
+
+CNT60.vの説明
+
+module CNT60(CLK, RESET, DEC, ENABLE, CNT10, CNT6);
+//module名がCNT60である。（）内でこのモジュールで使用する信号を記述していく。
+//ここでは任意の名前を付けられるが、分かりやすい名前を付ける。
+
+input CLK, RESET, DEC, ENABLE;
+//上で記述した内の入力の信号名を記述する。
+*CLKはクロック、RESETはリセット、DECはデクリメント（減少）を表す信号。
+*ENABLEは1秒のごとに1回動く信号。
+
+output [3:0] CNT10;   //CNT10は1桁目。
+output [2:0] CNT6;   //CNTは2桁目
+//上で記述した内の出力の信号名を記述する。
+//[3:0]は3がMSB（最上位ビット）、0がLSB（最下位ビット）の4bitの信号を表す。
+
+reg [3:0] CNT10;
+reg [2:0] CNT6;
+reg CARRY;　　//桁上がり。
+//下で記述される式の左辺にあるものは必ずreg宣言される。
+
+always @(posedge CLK or posedge RESET)  //CLKかRESETが立っている状態。
+//always文は@以下の条件のとき、常に適応される。
+//posedgeは信号がたった時を表し、反対はnegedgeで信号が降りたときを表す。
+//元ソースはnegedge RESETだが、今回扱うFPGAでは正論理、負論理が元のボードと逆転しているので、今後negedge RESETはposedge RESETと記述する。
+
+
+  begin　　//beginからendまでの信号を順番に実行する。
+
+     if (RESET == 1'b1)  //リセットが押されていない時の状態。
+　　　　　　　　　　　　　　　　//if文。（）内の条件の時に適応される。
+　　　　　　　　　　　　　　　　//（）内の==は比較を表す。1’bは1桁の1bitを表し、二進数の1であることを表す。
+　　　　　　　　　　　　　　　　//ここも上のnegedgeと同じく、正論理、負論理が逆転するので、1’b0を1’b1に変える。
+
+       begin
+	  CNT10 <= 4'h0;   //2桁目に0を入れる。
+　　　　　　　　　　　　　　　　　//<=はノンブロッキング代入を表し、複数あった場合には同時に実行される。
+　　　　　　　　　　　　　　　　　//ブロッキング代入は=で表し、複数ある場合、上から実行される。
+　　　　　　　　　　　　　　　　　//4’hは4桁の16進数を表す。
+
+       end　　//endはbeginと対になっている。
+
+     else if (ENABLE == 1'b1)    //RESETが押され、ENABLEが1ならば
+　　　　　　　　　　　　　　　　　　　　//if文が成り立たない場合に、()以下が成り立つ場合に実行される。
+
+       if (DEC == 1'b0)   //DECが押されている時。
+　　　　　　　　　　　　　　　　　　//else if文の中のif文である。
+
+	 begin
+	   if (CARRY == 1'b1)　//CARRYが立っているならば。
+	      CNT10 <= 4'h0;  //１桁目に0を入れる。
+	    else
+	      CNT10 <= CNT10 + 4'h1;　　//CARRYが立っていない時、16bitの1を1桁目に足す。
+	 end
+       else　　//DECが押されていない時。
+	 begin
+	      if (CARRY == 1'b1)　　//CARRYが立っているならば、
+	      CNT10 <= 4'h9;　　//１桁目に9を入れる。
+	    else
+	      CNT10 <= CNT10 - 4'h1;　//CARRYが立っていないならば、1桁目から1を引く。
+	 end
+  end
+
+always @(CNT10 or DEC)　　//CNT10かDECが変化した時。
+begin
+    if (DEC == 1'b0)　　//DECが押されている時。
+        if (CNT10 == 4'h9)  //1桁目が9ならば。
+            CARRY <= 1'b1;　//CARRYが立つ。
+        else
+            CARRY <= 1'b0;　　//1桁目が9以外ならばCARRYは立たない。
+    else
+        if (CNT10 == 4'h0)  //DECが押されていない時、1桁目が0ならば。
+            CARRY <= 1'b1;　　//CARRYは立つ。
+        else
+            CARRY <= 1'b0;　　//1桁目は0以外ならば、CARRYは立たない。
+end
+
+always @(posedge CLK or posedge RESET)　　//CLKかRESETが立った時。
+  begin
+     if (RESET == 1'b1)　　//RESETが押されていない時。
+       begin
+	  CNT6 <= 3'b000;　　2桁目に0を入れる。
+       end
+     else if (ENABLE == 1'b1 && CARRY == 1'b1)　//RESETが押されていて、ENABLEが1であり、CARRYが立っている時。
+       if (DEC == 1'b0)　　//DECが押されているならば
+	 begin
+	    if (CNT6 == 3'b101)　　//2桁目が5ならば
+		CNT6 <= 3'b000;　　//2桁目に0を入れる。
+	    else
+		CNT6 <= CNT6 + 3'b001;　//2桁目が5以外ならば1を足す。
+	 end
+       else
+	 begin
+	   if (CNT6 == 3'b000)　　//DECが押されていない場合、2桁目が0ならば
+		CNT6 <= 3'b101;　　//2桁目に5を入れる。
+	   else
+		CNT6 <= CNT6 - 3'b001;　2桁目が0以外ならば、2桁目から1を引く。
+	 end
+  end
+
+endmodule
+

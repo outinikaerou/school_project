@@ -1,41 +1,41 @@
-module CNT60 (RESET, CLK, DEC, )
-input
-output
+module CNT60(CLK, RESET, DEC, ENABLE, CNT10, CNT6);
+input CLK, RESET, DEC, ENABLE;
+output [3:0] CNT10;
+output [2:0] CNT6;
 
-parameter
+reg [3:0] CNT10;
+reg [2:0] CNT6;
+reg CARRY;
 
-reg
-wire ENABLE;
-
-always @(posedge CLK or negedge RESET)
-begin
-    if (RESET == 1'b0)
-        begin
-            CNT10 <= 4'h0;
-        end
-    else if (ENABLE == 1'b1)
-    // else if (DEC == 1'b1)
-        if (DEC == 1'b1)
-            begin
-                // if (CNT10 == 4'h9)
-                if (CARRY == 1'b1)
-                    CNT10 <= 4'h0;
-                else
-                    CNT10 <= CNT10 + 4'h1;
-            end
-        else
-            begin
-                // if (CNT10 == 4'h0)
-                if (CARRY == 1'b1)
-                    CNT10 <= 4'h9;
-                else
-                    CNT10 <= CNT10 - 4'h1;
-            end
-end
+always @(posedge CLK or posedge RESET)
+  begin
+     if (RESET == 1'b1)
+       begin
+	  CNT10 <= 4'h0;
+       end
+     else if (ENABLE == 1'b1)
+       //else if (DEC == 1'b1)
+       if (DEC == 1'b0)
+	 begin
+	    if (CNT10 == 4'h9)
+	      //if (CARRY == 1'b1)
+	      CNT10 <= 4'h0;
+	    else
+	      CNT10 <= CNT10 + 4'h1;
+	 end
+       else
+	 begin
+	    if (CNT10 == 4'h0)
+	      //if (CARRY == 1'b1)
+	      CNT10 <= 4'h9;
+	    else
+	      CNT10 <= CNT10 - 4'h1;
+	 end
+  end
 
 always @(CNT10 or DEC)
 begin
-    if (DEC == 1'b1)
+    if (DEC == 1'b0)
         if (CNT10 == 4'h9)
             CARRY <= 1'b1;
         else
@@ -47,28 +47,32 @@ begin
             CARRY <= 1'b0;
 end
 
-always @(posedge CLK or negedge RESET)
-begin
-    if (RESET == 1'b0)
-        begin
-            CNT6 <= 3'b000;
-        end
-            else if (ENABLE == 1'b1 && CARRY == 1'b1)
-                // else if (DEC == 1'b1)
-                if (DEC == 1'b1)
-                    begin
-                        if (CNT6 == 3'b101)
-                            CNT6 <= 3'b000;
-                        else
-                            CNT6 <= CNT6 + 3'b001;
-                    end
-                else
-                    begin
-                        if (CNT6 == 3'b000)
-                            CNT6 <= 3'b101;
-                        else
-                            CNT6 <= CNT6 - 3'b001;
-                    end
-end
+always @(posedge CLK or posedge RESET)
+  begin
+     if (RESET == 1'b1)
+       begin
+	  CNT6 <= 3'b000;
+       end
+//     else if (ENABLE == 1'b1)
+     else if (ENABLE == 1'b1 && CARRY == 1'b1)
+       //else if (DEC == 1'b1)
+       if (DEC == 1'b0)
+	 begin
+	    if (CNT10 == 4'h9)
+	      if (CNT6 == 3'b101)
+		CNT6 <= 3'b000;
+	      else
+		CNT6 <= CNT6 + 3'b001;
+	 end
+       else
+	 begin
+	    if (CNT10 == 4'h0)
+	      if (CNT6 == 3'b000)
+		CNT6 <= 3'b101;
+	      else
+		CNT6 <= CNT6 - 3'b001;
+	 end
+  end
 
 endmodule
+

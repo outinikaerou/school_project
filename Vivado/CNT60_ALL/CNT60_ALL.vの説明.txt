@@ -1,0 +1,39 @@
+CNT60_ALL.vの説明
+これは全てのmoduleを1つに統合するためのmoduleである。
+
+module CNT60_ALL(CLK, RESET, DEC, LED, SA);　　
+input CLK, RESET, DEC;    
+output [7:0] LED;　　//7セグメントLEDの各桁の中身を決める。
+output [3:0] SA;　　//7セグメントLEDの桁を決める。
+
+reg [23:0] tmp_count;　　//これは元ソースでは [22:0] tmp_countとなっているが、12MHzと倍になるため、bitを1つ増やし、[23:0]とする。
+
+wire [3:0] CNT10;　　//0から9まであるので4bit必要になる。
+wire [2:0] CNT6;　　//0から5までなので3bit必要になる。
+wire ENABLE, ENABLE_kHz;　
+wire [7:0] LED10, LED6;
+
+parameter SEC1_MAX = 12000000; // 12MHz  //これは元ソースでは6MHzで6000000となっているが、今回用いるFPGAは12MHzなので、12000000を用いる。
+
+always @(posedge CLK or posedge RESET)　　//CLKかRESETが立った時に常に動作する。
+  begin
+     if (RESET == 1'b1)　　//RESETが押されていない場合。
+       tmp_count <= 23'h000000;　　//tmp_countに0を入れる。
+     else if (ENABLE == 1'b1)　　//RESETが押され、ENABLEが1になった時。
+       tmp_count <= 23'h000000;　　//tmp_countに0を入れる。
+     else
+       tmp_count <= tmp_count + 23'h1;  //tmp_countに1を加える。
+  end
+
+assign ENABLE = (tmp_count == (SEC1_MAX - 1))? 1'b1 : 1'b0;　　//ENABLEはtmp_countに最大値-1の値を取り、1秒に一回信号を送る。
+assign ENABLE_kHz = (tmp_count[11:0] == 12'hfff)? 1'b1 : 1'b0;　　//ENABLE_kHzはKHzオーダーで1回動作する信号。
+
+CNT60 i0(.CLK(CLK), .RESET(RESET), .DEC(DEC), .ENABLE(ENABLE),　　//インスタンス（ブレットボードに挿す）を行う。
+	 .CNT10(CNT10), .CNT6(CNT6));　　　　　　　　　　　　　　//module名　インスタンス名(.moduleのポート名(接続する信号名))で表す。
+DECODER7 i1(.COUNT(CNT10), .LED(LED10));　　　　　　　　　　　　　//同じ信号名を持つものは接続され、各input、outputに接続される。
+DECODER7 i2(.COUNT({1'b0,CNT6}), .LED(LED6));　　　　　　　　　　//接続するポートのbit幅が異なる場合、桁を合わせるため{1'b0,CNT6}のようにbitを合わせる。
+DCOUNT i3(.CLK(CLK), .ENABLE(ENABLE_kHz), .L1(LED10), .L2(LED6),　　//L3とL4は常に点灯させないので、8'hffの定数を入力する。
+	  .L3(8'hff), .L4(8'hff), .SA(SA), .L(LED));
+
+endmodule
+
