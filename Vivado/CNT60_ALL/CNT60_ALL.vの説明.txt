@@ -18,11 +18,11 @@ parameter SEC1_MAX = 12000000; // 12MHz  //これは元ソースでは6MHzで6000000となっ
 always @(posedge CLK or posedge RESET)　　//CLKかRESETが立った時に常に動作する。
   begin
      if (RESET == 1'b1)　　//RESETが押されていない場合。
-       tmp_count <= 23'h000000;　　//tmp_countに0を入れる。
+       tmp_count <= 24'h000000;　　//tmp_countに0を入れる。
      else if (ENABLE == 1'b1)　　//RESETが押され、ENABLEが1になった時。
-       tmp_count <= 23'h000000;　　//tmp_countに0を入れる。
+       tmp_count <= 24'h000000;　　//tmp_countに0を入れる。
      else
-       tmp_count <= tmp_count + 23'h1;  //tmp_countに1を加える。
+       tmp_count <= tmp_count + 24'h1;  //tmp_countに1を加える。
   end
 
 assign ENABLE = (tmp_count == (SEC1_MAX - 1))? 1'b1 : 1'b0;　　//ENABLEはtmp_countに最大値-1の値を取り、1秒に一回信号を送る。

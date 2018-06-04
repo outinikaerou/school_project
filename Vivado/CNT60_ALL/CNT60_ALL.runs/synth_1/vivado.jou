@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4.2 (64-bit)
+# SW Build 1494164 on Fri Feb 26 04:18:56 MST 2016
+# IP Build 1491208 on Wed Feb 24 03:25:39 MST 2016
+# Start of session at: Mon Jun 04 15:23:52 2018
+# Process ID: 1300
+# Current directory: Z:/github/Vivado/CNT60_ALL/CNT60_ALL.runs/synth_1
+# Command line: vivado.exe -log CNT60_ALL.vds -mode batch -messageDb vivado.pb -notrace -source CNT60_ALL.tcl
+# Log file: Z:/github/Vivado/CNT60_ALL/CNT60_ALL.runs/synth_1/CNT60_ALL.vds
+# Journal file: Z:/github/Vivado/CNT60_ALL/CNT60_ALL.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CNT60_ALL.tcl -notrace
