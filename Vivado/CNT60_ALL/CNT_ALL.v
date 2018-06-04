@@ -1,5 +1,5 @@
-module CNT60_ALL(CLK, RESET, DEC, LED, SA);
-input CLK, RESET, DEC;
+module CNT60_ALL(CLK, RESET, DEC, LED, SA, ENABLE);
+input CLK, RESET, DEC, ENABLE;
 output [7:0] LED;
 output [3:0] SA;
 
@@ -10,7 +10,6 @@ wire [2:0] CNT6;
 wire ENABLE, ENABLE_kHz;
 wire [7:0] LED10, LED6;
 
-parameter SEC1_MAX = 12000000; // 12MHz
 
 always @(posedge CLK or posedge RESET)
   begin
@@ -22,7 +21,7 @@ always @(posedge CLK or posedge RESET)
        tmp_count <= tmp_count + 24'h1;
   end
 
-assign ENABLE = (tmp_count == (SEC1_MAX - 1))? 1'b1 : 1'b0;
+
 assign ENABLE_kHz = (tmp_count[11:0] == 12'hfff)? 1'b1 : 1'b0;
 
 CNT60 i0(.CLK(CLK), .RESET(RESET), .DEC(DEC), .ENABLE(ENABLE),
@@ -31,6 +30,8 @@ DECODER7 i1(.COUNT(CNT10), .LED(LED10));
 DECODER7 i2(.COUNT({1'b0,CNT6}), .LED(LED6));
 DCOUNT i3(.CLK(CLK), .ENABLE(ENABLE_kHz), .L1(LED10), .L2(LED6),
 	  .L3(8'hff), .L4(8'hff), .SA(SA), .L(LED));
+ENABLE_GEN i4 (.ENABLE(ENABLE), .CLK(CLK), .RESET(RESET));
+	  
 
 endmodule
 

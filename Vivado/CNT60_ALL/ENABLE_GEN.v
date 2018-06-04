@@ -1,6 +1,6 @@
-module ENABLE_GEN(CLK, ENABLE_GEN)
-input CLK
-output ENABLE_GEN
+module ENABLE_GEN (CLK, RESET, ENABLE);
+input CLK, RESET;
+output ENABLE;
 
 reg [23:0] tmp_count;
 wire ENABLE;
@@ -19,3 +19,4 @@ always @(posedge CLK or posedge RESET)
        tmp_count <= tmp_count + 24'h1;
   end
   
+endmodule
